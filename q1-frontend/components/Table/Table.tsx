@@ -53,7 +53,7 @@ export default function Table() {
 
   return (
     <>
-      <AlertModal useContents={useContents} />
+      <AlertModal UseContents={useContents} />
       <div className={styles.myTable}>
         <div className={styles.row}>
           {contents.columnTitles.map((item) => <div className={styles.item} key={item}>{item}</div>)}
@@ -68,7 +68,7 @@ export default function Table() {
             </div>
             <div className={styles.item}>
               {content.updates.map((update) => 
-                <div className={styles.update}>
+                <div className={styles.update} key={update.update}>
                   {update.update}
                   <div className={styles.date}>{update.date}</div>
                 </div>
